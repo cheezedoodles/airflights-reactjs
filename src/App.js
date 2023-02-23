@@ -1,5 +1,7 @@
-import './App.css';
 import { useState, useCallback, useEffect } from 'react';
+import axios from 'axios';
+
+import './App.css';
 
 function App() {
 
@@ -9,9 +11,13 @@ function App() {
   })
   const API_FETCH_FLIGHTS = `http://127.0.0.1:3001/api/flights?page=${page}`
 
-  // const handleFetchFlights = useCallback( async () => {
-  //   try {}
-  // })
+  const handleFetchFlights = useCallback( async () => {
+    try {
+      let result = await axios.get(API_FETCH_FLIGHTS) 
+    } catch {
+      console.log('failed fetching flights')
+    }
+  }, [page])
 
   return (
     <div className="App">
