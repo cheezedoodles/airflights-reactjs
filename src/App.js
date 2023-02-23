@@ -33,6 +33,14 @@ function App() {
         Submit
       </button>
       <ul>
+        <li className="Item">
+          <span className="elem">Flight No.</span>
+          <span className="elem">Departure airport</span>
+          <span className="elem">Arrival airport</span>
+          <span className="elem">Scheduled departure</span>
+          <span className="elem">Scheduled arrival</span>
+          <span className="elem">Status</span>
+        </li>
         {flightsData.flights.map((flight) => (
           <li className="Item" key={flight.flight_id}>
             <span className="elem">{flight.flight_no}</span>
@@ -41,7 +49,6 @@ function App() {
             <span className="elem">{flight.scheduled_departure}</span>
             <span className="elem">{flight.scheduled_arrival}</span>
             <span className="elem">{flight.status}</span>
-
           </li>
       ))}
       </ul>
