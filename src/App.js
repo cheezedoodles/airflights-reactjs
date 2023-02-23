@@ -29,9 +29,6 @@ function App() {
   return (
     <div className="App">
       <h1>Airflights</h1>
-      <button type="submit" onClick={() => setPage(page + 1)}>
-        Submit
-      </button>
       <ul>
         <li className="Item">
           <span className="elem">Flight No.</span>
@@ -52,6 +49,9 @@ function App() {
           </li>
       ))}
       </ul>
+      <button type="submit" onClick={() => setPage(page + 1)}>
+        Load more
+      </button>
     </div>
   );
 }
