@@ -9,6 +9,9 @@ function App() {
   })
   const API_FETCH_FLIGHTS = `http://127.0.0.1:3001/api/flights?page=${page}`
 
+  // const handleFetchFlights = useCallback( async () => {
+  //   try {}
+  // })
 
   return (
     <div className="App">
