@@ -32,6 +32,19 @@ function App() {
       <button type="submit" onClick={() => setPage(page + 1)}>
         Submit
       </button>
+      <ul>
+        {flightsData.flights.map((flight) => (
+          <li className="Item" key={flight.flight_id}>
+            <span className="elem">{flight.flight_no}</span>
+            <span className="elem">{flight.departure_airport}</span>
+            <span className="elem">{flight.arrival_airport}</span>
+            <span className="elem">{flight.scheduled_departure}</span>
+            <span className="elem">{flight.scheduled_arrival}</span>
+            <span className="elem">{flight.status}</span>
+
+          </li>
+      ))}
+      </ul>
     </div>
   );
 }
