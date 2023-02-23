@@ -13,6 +13,9 @@ function App() {
   return (
     <div className="App">
       <h1>Airflights</h1>
+      <button type="submit" onClick={() => setPage(page + 1)}>
+        Submit
+      </button>
     </div>
   );
 }
