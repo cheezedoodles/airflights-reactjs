@@ -13,11 +13,18 @@ function App() {
 
   const handleFetchFlights = useCallback( async () => {
     try {
-      let result = await axios.get(API_FETCH_FLIGHTS) 
+      let result = await axios.get(API_FETCH_FLIGHTS)
+      setFlightsData(result.data) 
     } catch {
       console.log('failed fetching flights')
     }
-  }, [page])
+  }, [API_FETCH_FLIGHTS])
+
+
+  useEffect(() => {
+    handleFetchFlights()
+  }, [handleFetchFlights])
+
 
   return (
     <div className="App">
